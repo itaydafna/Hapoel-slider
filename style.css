@@ -1,0 +1,201 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+
+
+/*styling stats here*/
+
+/*general styling*/
+
+html {
+	font-size: 62.5%;
+}
+ul {
+	list-style: none;
+}
+
+body {
+	
+	position: relative;
+	background-image: url("img/jer-stone.jpg");
+ }
+
+
+/*player cards styling*/
+
+
+.player-card {
+	background-image: url("img/court.jpeg");
+	display: none;
+	width:15.18%;
+}
+.player-card h3 {
+	text-align: center;
+	font-size: 2.3rem;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.player-card ul {
+	padding-left: 1.5rem;
+	font-family: serif;
+	font-size: 1.65rem;
+	line-height: 2.5rem;
+	text-align: left;
+}
+
+.player-card li::before {
+	content:" ";
+	width: 1.4rem;
+	height: 1.4rem;
+	display: inline-block;
+	background-image: url("img/bb-icon.png");
+	background-size: 100% auto;
+	margin-right: 1.3rem;
+	vertical-align: -10%;
+}
+
+
+/*header styling*/
+
+header {
+	text-align: center;
+}
+
+header h1 {
+	font-size: 6rem;
+	margin: 1rem;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-weight: 600;
+	text-shadow: 0.2rem .2rem red;
+}
+header h2 {
+	font-size: 4rem;
+	margin: 0.5rem;
+	background: rgba(225,0,0,.6);
+	display: inline-block;
+	padding: 0.2rem 1rem;
+	font-weight: 300;
+
+}
+
+header h1::after {
+	content:" ";
+	width: 6rem;
+	height: 6rem;
+	display: inline-block;
+	background-image: url("img/round-logo.png");
+	background-size: 100% auto;
+	margin-left: 1rem;
+	vertical-align: -10%;
+
+}
+
+/*slide-bar styling*/
+
+.slider-bar a:link,
+.slider-bar a:visited
+ {
+	text-decoration: none;
+	color: black;
+}
+
+.slider-bar {
+	text-align: center;
+	font-size: 2.2rem;
+	margin:0;
+}
+
+.slider-bar>ul>li {
+	display: inline-block;
+	margin: 2rem;
+	text-align: center;
+}
+
+.check-box {
+	display: inline-block;
+	text-align: center;
+	height: 6rem;
+	width: 6rem;
+	border: 0.1rem solid black;
+	border-radius: 50%;
+	background: #FEFEFE;
+}
+
+:target {
+	background-image: url("img/round-logo.png");
+	background-size: 100% auto;
+}
+
+:target+.player-card {
+	display: inline-block;
+	text-align: center;
+	position: absolute;
+	top: 25rem;
+	left: 42.4%;	
+}
+
+:target+.player-card>.stats
+ {
+	display: none;
+}
+
+:target+.player-card>img {
+	display:block;
+	width:100%;
+}
+
+:target+.player-card>img:hover~.stats{
+	display: inline-block;
+}
+
+
+
